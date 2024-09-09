@@ -1,7 +1,7 @@
-
 def multiplicacion(factor1, factor2):
     producto = factor1 * factor2
     return producto
+
 
 if __name__ == "__main__":
     # Corrige 'imput' a 'input' y la indentación
