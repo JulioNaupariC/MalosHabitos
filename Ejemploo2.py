@@ -1,15 +1,24 @@
-def multiplicacion(factor1, factor2):
-    producto = factor1 * factor2
-    return producto
+def calcular_multiplicacion_y_suma(factor1, factor2, suma_adicional):
 
+    return factor1 * factor2 + suma_adicional
+
+def obtener_entrada(mensaje):
+
+    while True:
+        try:
+            return float(input(mensaje))
+        except ValueError:
+            print("Entrada no válida. Por favor, ingrese un número válido.")
+
+def principal():
+
+    print("Por favor, ingrese los siguientes valores:")
+    factor1 = obtener_entrada("Ingrese el primer número (factor1): ")
+    factor2 = obtener_entrada("Ingrese el segundo número (factor2): ")
+    suma_adicional = obtener_entrada("Ingrese el valor adicional a sumar: ")
+
+    resultado = calcular_multiplicacion_y_suma(factor1, factor2, suma_adicional)
+    print(f"El resultado de ({factor1} * {factor2}) + {suma_adicional} es: {resultado}")
 
 if __name__ == "__main__":
-    # Corrige 'imput' a 'input' y la indentación
-    multiplicando = float(input("Ingrese el primer número: "))
-    multiplicador = float(input("Ingrese el segundo número: "))
-
-    # Llama a la función de multiplicación y almacena el resultado
-    resultado = multiplicacion(multiplicando, multiplicador)
-
-    # Imprime el resultado de manera formateada
-    print(f"{multiplicando} * {multiplicador} = {resultado}")
+    principal()")
